@@ -20,7 +20,7 @@ export function Footer() {
           making health decisions.{" "}
           <Link
             href="/disclaimer"
-            className="underline hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
+            className="underline hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
           >
             Full disclaimer
           </Link>
@@ -42,7 +42,7 @@ export function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
+                  className="hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
                 >
                   {label}
                 </Link>

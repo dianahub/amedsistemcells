@@ -40,7 +40,7 @@ export function TopicDetailModal({ title, group }: Props) {
         className={`mt-auto text-sm font-medium rounded px-3 py-1.5 transition-colors text-center w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 ${
           isKlow
             ? "text-blue-700 border border-blue-300 hover:bg-blue-50 focus-visible:ring-blue-500"
-            : "text-teal-700 border border-teal-300 hover:bg-teal-50 focus-visible:ring-teal-500"
+            : "text-brand-700 border border-brand-100 hover:bg-brand-50 focus-visible:ring-brand-600"
         }`}
       >
         Learn about {title}
@@ -62,7 +62,7 @@ export function TopicDetailModal({ title, group }: Props) {
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6">
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 text-stone-400 hover:text-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
+              className="absolute top-4 right-4 text-stone-400 hover:text-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
               aria-label="Close"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -89,7 +89,7 @@ export function TopicDetailModal({ title, group }: Props) {
                   {title}
                 </h2>
                 {detail.subtitle && (
-                  <p className={`text-sm font-medium mt-0.5 ${isKlow ? "text-blue-600" : "text-teal-600"}`}>
+                  <p className={`text-sm font-medium mt-0.5 ${isKlow ? "text-blue-600" : "text-brand-600"}`}>
                     {detail.subtitle}
                   </p>
                 )}
@@ -152,7 +152,7 @@ export function TopicDetailModal({ title, group }: Props) {
             <Link
               href={`/consultation?${params.toString()}`}
               onClick={() => setOpen(false)}
-              className="block w-full bg-teal-600 text-white font-semibold text-center rounded-md px-4 py-3 hover:bg-teal-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+              className="block w-full bg-brand-600 text-white font-semibold text-center rounded-md px-4 py-3 hover:bg-brand-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
             >
               Ask about {title} — free consultation
             </Link>

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { SITE_NAME } from "@/lib/config";
 
 const links = [
   { href: "/", label: "Home" },
@@ -23,11 +22,17 @@ export function Nav() {
         className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16"
         aria-label="Main navigation"
       >
+        {/* Logo — matches amedsipeptides.com branding */}
         <Link
           href="/"
-          className="font-semibold text-lg text-teal-700 tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
+          className="flex flex-col leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
         >
-          {SITE_NAME}
+          <span className="font-bold text-xl tracking-widest text-stone-800 uppercase">
+            AMEDSI
+          </span>
+          <span className="text-[10px] tracking-wider text-stone-500 uppercase">
+            Aspen Med Services Intl.
+          </span>
         </Link>
 
         {/* Desktop */}
@@ -37,13 +42,13 @@ export function Nav() {
               <Link
                 href={href}
                 aria-current={pathname === href ? "page" : undefined}
-                className={`px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 ${
+                className={`px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 ${
                   pathname === href
-                    ? "bg-teal-50 text-teal-700"
-                    : "text-stone-600 hover:text-teal-700 hover:bg-stone-50"
+                    ? "bg-brand-50 text-brand-600"
+                    : "text-stone-600 hover:text-brand-600 hover:bg-stone-50"
                 } ${
                   href === "/consultation"
-                    ? "bg-teal-600 text-white hover:bg-teal-700 hover:text-white ml-2"
+                    ? "bg-brand-600 text-white hover:bg-brand-700 hover:text-white ml-2"
                     : ""
                 }`}
               >
@@ -55,7 +60,7 @@ export function Nav() {
 
         {/* Mobile burger */}
         <button
-          className="md:hidden p-2 rounded text-stone-600 hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+          className="md:hidden p-2 rounded text-stone-600 hover:text-brand-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -100,10 +105,10 @@ export function Nav() {
                   href={href}
                   aria-current={pathname === href ? "page" : undefined}
                   onClick={() => setOpen(false)}
-                  className={`block px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 ${
+                  className={`block px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 ${
                     pathname === href
-                      ? "bg-teal-50 text-teal-700"
-                      : "text-stone-600 hover:text-teal-700 hover:bg-stone-50"
+                      ? "bg-brand-50 text-brand-600"
+                      : "text-stone-600 hover:text-brand-600 hover:bg-stone-50"
                   }`}
                 >
                   {label}

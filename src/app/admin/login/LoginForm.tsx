@@ -24,7 +24,7 @@ export function LoginForm() {
           name="email"
           required
           autoComplete="username"
-          className="w-full border border-stone-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full border border-stone-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600"
         />
       </div>
 
@@ -38,14 +38,14 @@ export function LoginForm() {
           name="password"
           required
           autoComplete="current-password"
-          className="w-full border border-stone-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full border border-stone-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600"
         />
       </div>
 
       <button
         type="submit"
         disabled={pending}
-        className="w-full bg-teal-600 text-white font-medium rounded-md px-4 py-2.5 hover:bg-teal-700 disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+        className="w-full bg-brand-600 text-white font-medium rounded-md px-4 py-2.5 hover:bg-brand-700 disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
         aria-busy={pending}
       >
         {pending ? "Signing in…" : "Sign in"}

@@ -90,7 +90,7 @@ export default async function TopicPage({
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-stone-400 mb-6">
-        <Link href="/topics" className="hover:text-teal-700">Topics</Link>
+        <Link href="/topics" className="hover:text-brand-700">Topics</Link>
         <span className="mx-2">›</span>
         <span className="text-stone-600">{topic.title}</span>
       </nav>
@@ -112,7 +112,7 @@ export default async function TopicPage({
             {topic.title} Research
           </h1>
           {detail?.subtitle && (
-            <p className="text-teal-700 font-medium mt-1">{detail.subtitle}</p>
+            <p className="text-brand-700 font-medium mt-1">{detail.subtitle}</p>
           )}
           <p className="text-sm text-stone-500 mt-2">
             Research area: {topic.researchArea}
@@ -192,7 +192,7 @@ export default async function TopicPage({
       </p>
 
       {/* CTA */}
-      <div className="bg-teal-50 border border-teal-200 rounded-xl p-6">
+      <div className="bg-brand-50 border border-brand-100 rounded-xl p-6">
         <h2 className="text-lg font-semibold text-stone-800 mb-2">
           Have questions about {topic.title}?
         </h2>
@@ -202,14 +202,14 @@ export default async function TopicPage({
         <AffiliateDisclosure className="mb-4" />
         <Link
           href={`/consultation?${consultationParams.toString()}`}
-          className="inline-block bg-teal-600 text-white font-semibold rounded-md px-6 py-3 hover:bg-teal-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+          className="inline-block bg-brand-600 text-white font-semibold rounded-md px-6 py-3 hover:bg-brand-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
         >
           Request a free consultation
         </Link>
       </div>
 
       <div className="mt-8">
-        <Link href="/topics" className="text-sm text-teal-700 hover:underline">
+        <Link href="/topics" className="text-sm text-brand-700 hover:underline">
           ← Back to all topics
         </Link>
       </div>

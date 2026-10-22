@@ -31,13 +31,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/consultation"
-              className="inline-block bg-teal-600 text-white font-semibold rounded-md px-7 py-3 hover:bg-teal-700 transition-colors text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
+              className="inline-block bg-brand-600 text-white font-semibold rounded-md px-7 py-3 hover:bg-brand-700 transition-colors text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
             >
               Request a free consultation
             </Link>
             <Link
               href="/topics"
-              className="inline-block border border-stone-300 text-stone-700 font-semibold rounded-md px-7 py-3 hover:bg-stone-100 transition-colors text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
+              className="inline-block border border-stone-300 text-stone-700 font-semibold rounded-md px-7 py-3 hover:bg-stone-100 transition-colors text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
             >
               Explore education topics
             </Link>
@@ -88,7 +88,7 @@ export default function HomePage() {
               },
             ].map(({ step, title, body }) => (
               <li key={step} className="flex flex-col items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-700 font-bold text-lg">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-700 font-bold text-lg">
                   {step}
                 </span>
                 <h3 className="font-semibold text-stone-800">{title}</h3>
@@ -111,7 +111,7 @@ export default function HomePage() {
         <AffiliateDisclosure className="max-w-xl mx-auto mb-6 text-left" />
         <Link
           href="/consultation"
-          className="inline-block bg-teal-600 text-white font-semibold rounded-md px-8 py-3 hover:bg-teal-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
+          className="inline-block bg-brand-600 text-white font-semibold rounded-md px-8 py-3 hover:bg-brand-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
         >
           Request a free consultation
         </Link>
