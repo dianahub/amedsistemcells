@@ -10,7 +10,7 @@ const links = [
   { href: "/videos", label: "Videos" },
   { href: "/topics", label: "Topics" },
   { href: "/consultation", label: "Free Consultation" },
-  { href: "/about", label: "About" },
+  { href: "https://amedsi.com/#about", label: "About" },
 ];
 
 export function Nav() {
@@ -66,25 +66,29 @@ export function Nav() {
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-1" role="list">
-          {links.map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                aria-current={pathname === href ? "page" : undefined}
-                className={`px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 ${
-                  pathname === href
-                    ? "bg-brand-50 text-brand-600"
-                    : "text-stone-600 hover:text-brand-600 hover:bg-stone-50"
-                } ${
-                  href === "/consultation"
-                    ? "bg-brand-600 text-white hover:bg-brand-700 hover:text-white ml-2"
-                    : ""
-                }`}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {links.map(({ href, label }) => {
+            const external = href.startsWith("http");
+            const className = `px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 ${
+              !external && pathname === href
+                ? "bg-brand-50 text-brand-600"
+                : "text-stone-600 hover:text-brand-600 hover:bg-stone-50"
+            } ${
+              href === "/consultation"
+                ? "bg-brand-600 text-white hover:bg-brand-700 hover:text-white ml-2"
+                : ""
+            }`;
+            return (
+              <li key={href}>
+                {external ? (
+                  <a href={href} className={className}>{label}</a>
+                ) : (
+                  <Link href={href} aria-current={pathname === href ? "page" : undefined} className={className}>
+                    {label}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {/* Mobile burger */}
@@ -128,22 +132,25 @@ export function Nav() {
           className="md:hidden border-t border-stone-100 bg-white px-4 pb-4"
         >
           <ul className="flex flex-col gap-1 pt-2" role="list">
-            {links.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  aria-current={pathname === href ? "page" : undefined}
-                  onClick={() => setOpen(false)}
-                  className={`block px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 ${
-                    pathname === href
-                      ? "bg-brand-50 text-brand-600"
-                      : "text-stone-600 hover:text-brand-600 hover:bg-stone-50"
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {links.map(({ href, label }) => {
+              const external = href.startsWith("http");
+              const className = `block px-3 py-2 rounded text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 ${
+                !external && pathname === href
+                  ? "bg-brand-50 text-brand-600"
+                  : "text-stone-600 hover:text-brand-600 hover:bg-stone-50"
+              }`;
+              return (
+                <li key={href}>
+                  {external ? (
+                    <a href={href} className={className} onClick={() => setOpen(false)}>{label}</a>
+                  ) : (
+                    <Link href={href} aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)} className={className}>
+                      {label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

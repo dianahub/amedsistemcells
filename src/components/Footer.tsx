@@ -27,18 +27,21 @@ export function Footer() {
               { href: "/videos", label: "Videos" },
               { href: "/topics", label: "Topics" },
               { href: "/consultation", label: "Free Consultation" },
-              { href: "/about", label: "About" },
+              { href: "https://amedsi.com/#about", label: "About" },
               { href: "/disclaimer", label: "Disclaimer" },
               { href: "/privacy", label: "Privacy Policy" },
               { href: "/terms", label: "Terms" },
             ].map(({ href, label }) => (
               <li key={href}>
-                <Link
-                  href={href}
-                  className="hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
-                >
-                  {label}
-                </Link>
+                {href.startsWith("http") ? (
+                  <a href={href} className="hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded">
+                    {label}
+                  </a>
+                ) : (
+                  <Link href={href} className="hover:text-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded">
+                    {label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
