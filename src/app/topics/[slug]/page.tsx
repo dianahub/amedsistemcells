@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import topicsData from "@/data/topics.json";
 import topicDetails from "@/data/topicDetails.json";
 import { slugify } from "@/lib/slugify";
-import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 
 type TopicDetail = {
   isBlend?: boolean;
@@ -199,7 +198,6 @@ export default async function TopicPage({
         <p className="text-stone-600 text-sm mb-4">
           Request a free consultation to ask questions and learn more about this research area.
         </p>
-        <AffiliateDisclosure className="mb-4" />
         <Link
           href={`/consultation?${consultationParams.toString()}`}
           className="inline-block bg-brand-600 text-white font-semibold rounded-md px-6 py-3 hover:bg-brand-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"

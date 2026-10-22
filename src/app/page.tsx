@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { VideoCard } from "@/components/VideoCard";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/lib/config";
 import videosData from "@/data/videos.json";
@@ -19,7 +18,6 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-white border-b border-stone-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-          <AffiliateDisclosure className="mb-8 max-w-2xl" />
           <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight mb-4 max-w-3xl">
             Amedsi Peptides: Peptide and Longevity Education
           </h1>
@@ -108,7 +106,6 @@ export default function HomePage() {
           Request a free consultation and get connected with an expert who can
           answer your questions.
         </p>
-        <AffiliateDisclosure className="max-w-xl mx-auto mb-6 text-left" />
         <Link
           href="/consultation"
           className="inline-block bg-brand-600 text-white font-semibold rounded-md px-8 py-3 hover:bg-brand-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"

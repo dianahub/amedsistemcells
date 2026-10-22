@@ -2,7 +2,6 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { submitConsultation } from "@/app/consultation/actions";
-import { AffiliateDisclosure } from "./AffiliateDisclosure";
 
 const CONSENT_TEXT =
   "My name, email, and topic of interest will be shared with The Longevity Consultants so they can contact me about a consultation.";
@@ -157,8 +156,6 @@ export function ConsultationForm({ defaultTopic }: Props) {
           characters.
         </p>
       </div>
-
-      <AffiliateDisclosure />
 
       <div className="flex items-start gap-3">
         <input

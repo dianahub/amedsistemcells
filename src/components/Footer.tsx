@@ -5,13 +5,6 @@ export function Footer() {
   return (
     <footer className="bg-stone-100 border-t border-stone-200 mt-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-        {/* Affiliate disclosure */}
-        <p className="text-sm text-stone-600 mb-4">
-          <strong>Affiliate disclosure:</strong> I am an independent affiliate
-          of The Longevity Consultants and may receive compensation if you
-          request a consultation through me.
-        </p>
-
         {/* Site-wide disclaimer */}
         <p className="text-sm text-stone-500 mb-6">
           The content on this site is for educational purposes only. It is not
@@ -52,8 +45,7 @@ export function Footer() {
         </nav>
 
         <p className="text-xs text-stone-400 mt-6">
-          © 2026 {SITE_NAME}. Independent affiliate site.
-          Not affiliated with or endorsed by The Longevity Consultants.
+          © 2026 {SITE_NAME}.
         </p>
       </div>
     </footer>
