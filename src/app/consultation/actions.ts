@@ -96,5 +96,36 @@ export async function submitConsultation(
     topic: parsed.data.topic ?? null,
   });
 
+  // Push lead to Zoho CRM
+  try {
+    const nameParts = parsed.data.name.trim().split(" ");
+    const firstName = nameParts.slice(0, -1).join(" ");
+    const lastName = nameParts[nameParts.length - 1];
+    const description = [
+      parsed.data.topic ? `Topic: ${parsed.data.topic}` : null,
+      parsed.data.message ? `Message: ${parsed.data.message}` : null,
+    ].filter(Boolean).join("\n");
+
+    const zohoData = new URLSearchParams({
+      xnQsjsdp: "e79f18dbbc2277a826c7d463a12b5f43e83ca6ed3428ae90c4c0141b434ba601",
+      xmIwtLD: "65841d7e962d82ca31569dd11c37abd837cfbd5cabd3007b793bc272b9b9fe5f8a82acbe60d1627b6b09189a4f889f03",
+      actionType: "TGVhZHM=",
+      returnURL: "https://amedsipeptides.com",
+      zc_gad: "",
+      "First Name": firstName,
+      "Last Name": lastName || parsed.data.name,
+      Email: parsed.data.email,
+      Description: description,
+    });
+
+    await fetch("https://crm.zoho.com/crm/WebToLeadForm", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: zohoData.toString(),
+    });
+  } catch {
+    // Silently skip — Zoho CRM push is best-effort
+  }
+
   return { success: true };
 }
