@@ -23,9 +23,9 @@ export function Nav() {
         className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16"
         aria-label="Main navigation"
       >
-        {/* Logo — matches amedsipeptides.com branding */}
-        <Link
-          href="/"
+        {/* Logo — links to main Amedsi site */}
+        <a
+          href="https://amedsi.com/"
           className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
         >
           <Image
@@ -43,7 +43,7 @@ export function Nav() {
               Aspen Med Services Intl.
             </span>
           </div>
-        </Link>
+        </a>
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-1" role="list">
