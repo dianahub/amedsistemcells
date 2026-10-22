@@ -22,9 +22,7 @@ export default function HomePage() {
             Amedsi Peptides: Peptide and Longevity Education
           </h1>
           <p className="text-lg text-stone-600 max-w-2xl mb-8">
-            {SITE_DESCRIPTION} I share educational content from The Longevity
-            Consultants as an independent affiliate and connect interested
-            visitors with a free consultation.
+            {SITE_DESCRIPTION}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

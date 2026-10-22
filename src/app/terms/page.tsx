@@ -44,8 +44,7 @@ export default function TermsPage() {
           <p>
             This site does not sell products, prescribe medications, or offer
             medical services. Submitting a consultation request connects you with
-            a third-party consulting company (The Longevity Consultants) as
-            described in the affiliate disclosure.
+            an Amedsi Peptides consultant.
           </p>
         </section>
 

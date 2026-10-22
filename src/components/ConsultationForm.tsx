@@ -4,7 +4,7 @@ import { useActionState, useEffect, useRef } from "react";
 import { submitConsultation } from "@/app/consultation/actions";
 
 const CONSENT_TEXT =
-  "My name, email, and topic of interest will be shared with The Longevity Consultants so they can contact me about a consultation.";
+  "My name, email, and topic of interest will be shared with Amedsi Peptides so they can contact me about a consultation.";
 
 interface Props {
   defaultTopic?: string;

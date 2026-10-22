@@ -33,8 +33,7 @@ export default function DisclaimerPage() {
           seeking it because of something you have read or watched on this site.
         </p>
         <p>
-          This site is operated by an independent affiliate of The Longevity
-          Consultants. It is not a medical practice, clinic, or pharmacy. No
+          This site is not a medical practice, clinic, or pharmacy. No
           products are sold here.
         </p>
         <p>

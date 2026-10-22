@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About this site and its independent affiliate relationship.",
+  description: "About Amedsi Peptides.",
 };
 
 export default function AboutPage() {
@@ -21,23 +21,6 @@ export default function AboutPage() {
         educational content. Keep it personal, warm, and honest.]
       </p>
 
-      {/* Affiliate statement */}
-      <div className="border-t border-stone-200 pt-8">
-        <h2 className="text-xl font-semibold text-stone-800 mb-3">
-          Independent affiliate
-        </h2>
-        <p className="text-stone-600 leading-relaxed">
-          I am an independent affiliate of The Longevity Consultants. I am not
-          an employee, agent, or representative of that company. The views and
-          content on this site are my own and do not represent the official
-          positions of The Longevity Consultants.
-        </p>
-        <p className="text-stone-600 leading-relaxed mt-3">
-          As an affiliate I may receive compensation if you request a
-          consultation through this site. This does not affect the educational
-          content presented here.
-        </p>
-      </div>
     </div>
   );
 }

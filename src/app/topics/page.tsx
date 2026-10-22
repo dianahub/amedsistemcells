@@ -5,7 +5,7 @@ import topicsData from "@/data/topics.json";
 export const metadata: Metadata = {
   title: "Peptide Education Topics — GLP-3, BPC-157, NAD+, Oxytocin & More",
   description:
-    "Educational information about peptide and longevity research areas including GLP-3, BPC-157, NAD+, Oxytocin, Epithalon, and more. Independent affiliate of The Longevity Consultants.",
+    "Educational information about peptide and longevity research areas including GLP-3, BPC-157, NAD+, Oxytocin, Epithalon, and more.",
 };
 
 const GLOBAL_NOTICE_TOP =

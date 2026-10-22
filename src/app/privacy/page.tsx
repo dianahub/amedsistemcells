@@ -33,9 +33,8 @@ export default function PrivacyPage() {
           </h2>
           <p>
             We use your name, email, message, and topic of interest to follow up
-            on your consultation request and to share that information with{" "}
-            <strong>The Longevity Consultants</strong> so they can contact you
-            to schedule a free consultation.
+            on your consultation request and to contact you to schedule a free
+            consultation.
           </p>
           <p className="mt-2">
             We do not sell your personal information. We do not use it for

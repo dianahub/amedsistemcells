@@ -6,7 +6,7 @@ import type { VideoEntry } from "@/types/videos";
 export const metadata: Metadata = {
   title: "Peptide & Longevity Education Videos",
   description:
-    "Watch educational videos about peptide research, longevity science, and wellness topics from The Longevity Consultants.",
+    "Watch educational videos about peptide research, longevity science, and wellness topics.",
 };
 
 export default function VideosPage() {

@@ -9,7 +9,7 @@ import { sendAdminNotification } from "@/lib/email";
 import { headers } from "next/headers";
 
 const CONSENT_TEXT =
-  "My name, email, and topic of interest will be shared with The Longevity Consultants so they can contact me about a consultation.";
+  "My name, email, and topic of interest will be shared with Amedsi Peptides so they can contact me about a consultation.";
 
 const schema = z.object({
   name: z.string().min(1, "Name is required").max(200),
