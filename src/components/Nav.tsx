@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -25,14 +26,23 @@ export function Nav() {
         {/* Logo — matches amedsipeptides.com branding */}
         <Link
           href="/"
-          className="flex flex-col leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
+          className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded"
         >
-          <span className="font-bold text-xl tracking-widest text-stone-800 uppercase">
-            AMEDSI
-          </span>
-          <span className="text-[10px] tracking-wider text-stone-500 uppercase">
-            Aspen Med Services Intl.
-          </span>
+          <Image
+            src="/amedsi_icon.png"
+            alt="Amedsi icon"
+            width={36}
+            height={44}
+            priority
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-bold text-xl tracking-widest text-stone-800 uppercase">
+              AMEDSI
+            </span>
+            <span className="text-[10px] tracking-wider text-stone-500 uppercase">
+              Aspen Med Services Intl.
+            </span>
+          </div>
         </Link>
 
         {/* Desktop */}
