@@ -19,6 +19,25 @@ export function Nav() {
 
   return (
     <header className="bg-white border-b border-stone-200 sticky top-0 z-40">
+      {/* Top bar — phone numbers */}
+      <div className="border-b border-stone-100 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-1.5 flex flex-wrap gap-x-6 gap-y-1 justify-end">
+          {[
+            { label: "+1 786 523 0113", tel: "+17865230113" },
+            { label: "+49 32 2122 49284", tel: "+493221224928" },
+            { label: "+420 723 850 509", tel: "+420723850509" },
+          ].map(({ label, tel }) => (
+            <a
+              key={tel}
+              href={`tel:${tel}`}
+              className="text-xs font-medium text-stone-900 hover:text-brand-600 transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+
       <nav
         className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16"
         aria-label="Main navigation"
