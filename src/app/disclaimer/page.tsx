@@ -8,9 +8,7 @@ export const metadata: Metadata = {
 export default function DisclaimerPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-      <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-3 py-2 mb-6">
-        Draft — have this reviewed by a licensed attorney before publishing.
-      </p>
+
       <h1 className="text-3xl font-bold text-stone-900 mb-6">Disclaimer</h1>
       <div className="prose prose-stone max-w-none space-y-4 text-stone-700 leading-relaxed">
         <p>
